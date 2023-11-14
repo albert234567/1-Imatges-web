@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con imágenes responsive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px; /* Agregar margen negativo para contrarrestar el relleno de las columnas */
+        }
+
+        .col {
+            flex: 50%; /* Cada columna ocupa el 50% del ancho en pantallas grandes */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .col {
+                flex: 100%; /* Una columna ocupa todo el ancho en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <div class="row">
+            <div class="col">
+                <img src="gato.png" alt="Imagen 1">
+            </div>
+            <div class="col">
+                <img src="gato.png" alt="Imagen 2">
+            </div>
+            <div class="col">
+                <img src="gato.png" alt="Imagen 3">
+            </div>
+            <div class="col">
+                <img src="gato.png" alt="Imagen 4">
+            </div>
+            <!-- Puedes agregar más filas de imágenes aquí -->
+        </div>
+    </div>
+</body>
+</html>
